@@ -1,74 +1,48 @@
-/* Google fonts to display the font family */
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Noto+Sans:wght@300&family=Pangolin&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-/* Background color of the web page */
-body{
-    background-color: #edeaff;
+body {
+    background-color: rgba(249, 248, 251, 0.327) !important;
+    
 }
 
-*{
-    padding: 0;
-    margin: -12px;
+/* stopwatch container */
+
+.container {
+    background-color: rgb(24, 3, 76);
+    width: 50% !important;
+    margin-top: 20vh;
+    height: 50vh;
+    font-size: 10vw;
+    font-family: 'Lato', sans-serif;
+    border-radius: 40px;
+    box-shadow: 1px 1px 11px 8px grey;
 }
 
+/* stopwatch-buttons */
 
-#name{
-    text-align: center;
-    margin: 30px auto;
-    font-size: 5rem;
-    letter-spacing: 5px;
-    font-family: monospace;
-    font-weight: bold;
+.buttons {
+    font-family: 'Lato', sans-serif;
 }
 
-/* Styling of the container which contains the Stopwatch */
-.container{
-    height: 60vh;
-    width: 60vw;
-    position: absolute; /* position of the container */
-    top: 15%;
-    left: 20%;
-    margin-top: 30px;
-    border: 3px solid #fffff1;
-    padding: 5px auto;
-    border-radius: 20px;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("C:/Users/hp/Desktop/HTML/stopwatch/image/background.png"); /* An image is set alongwith the linear gradient */
-    background-size: cover; /* background image will be set as cover */
-    background-position: center; /* position of the background image */
-    text-align: center;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+.buttons button {
+    box-shadow: 1px 1px 8px 4px rgb(112, 106, 106);
 }
 
-/* This styling is for the timer */
-.container h1{
-    font-family: 'Roboto Mono', monospace;
-    color: #fff;
-    font-size: 5rem;
-    font-weight: 300;
-    margin: 100px auto;
-}
+/* media-query for less than equal 830 px */
+@media screen and (max-width:830px) {
+    .count-down {
+        position: relative;
+        top: 3vh;
+    }
 
-/* Styling for the various buttons */
-.buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .buttons {
+        position: relative;
+        top: 2vh;
+        flex-direction: column;
+    }
 
-/* Setting the width and margin of the buttons */
-.buttons img{
-    width: 60px;
-    cursor: pointer;
-    margin: 0 20px;
-}
+    .btn {
+        margin-bottom: 4vh;
 
-/* On hover box-shadow will appear */
-.buttons img:hover{
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-}
-
-/* Increasing the width of Play button to differentiate it with others */
-.buttons img:nth-child(2){
-    width: 80px;
+    }
 }
